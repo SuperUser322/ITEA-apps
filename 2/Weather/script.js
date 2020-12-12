@@ -29,8 +29,8 @@ function getWeatherData(latitude, longitude) {
 function displayData(data) {
     city.innerText = data.name;
     humidity.innerText = data.main.humidity + ' %';
-    pressure.innerText = data.main.pressure + ' киллограм на метр в секунде';
-    temperature.innerText = kToC(data.main.temp) + 'ºC';//////////////////
+    pressure.innerText = data.main.pressure + ' килограмм на метр в секунде';       //давление, не знаю в чём оно тут приходит и в чём измеряется тоже xD
+    temperature.innerText = kToC(data.main.temp) + 'ºC';
     windSpeed.innerText = data.wind.speed + ' м/с';
     weatherIcon.innerHTML = ("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png'>");
     console.log(data);
