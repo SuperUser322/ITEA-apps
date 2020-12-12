@@ -1,7 +1,7 @@
-﻿const myButton = ge('button'); //подобное нельзя называть селекторами
-const phrasePlace = ge('#quote');
+﻿const myButton = getElement('button');			//подобное нельзя называть селекторами
+const phrasePlace = getElement('#quote');
 
-function ge(selector) {
+function getElement(selector) {			//ge - сокращение от get element, этот тул показал предыдущий преподаватель, оно мне понравилось и показалось удобным
 	return document.querySelector(selector);
 }
 
@@ -18,8 +18,8 @@ const quotes = [
 	'Страх убивает разум.'];
 
 function getRandomQuote() {
-	let x = Math.floor(Math.random() * 10); //Math.floor что б парсить эту дробную дичь не пришлось
-	phrasePlace.innerHTML = quotes[x];
+	let randomIndex = Math.floor(Math.random() * quotes.length);			//Math.floor что б парсить эту дробную дичь не пришлось
+	phrasePlace.innerHTML = quotes[randomIndex];
 }
 
 myButton.addEventListener('click', () => {
