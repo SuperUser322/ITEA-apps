@@ -29,8 +29,8 @@ function getWeatherData(latitude, longitude) {
 function displayData(data) {
     city.innerText = data.name;
     humidity.innerText = data.main.humidity + ' %';
-    pressure.innerText = data.main.pressure + ' килограмм на метр в секунде';       //давление, не знаю в чём оно тут приходит и в чём измеряется тоже xD
-    temperature.innerText = kToC(data.main.temp) + 'ºC';
+    pressure.innerText = hPaTommHg(data.main.pressure) + ' мм рт ст';
+    temperature.innerText = kToC(data.main.temp) + 'ºC';//////////////////
     windSpeed.innerText = data.wind.speed + ' м/с';
     weatherIcon.innerHTML = ("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png'>");
     console.log(data);
@@ -38,6 +38,10 @@ function displayData(data) {
 
 function kToC(k) {
     return Math.round(k - 273.15);      //из кельвинов в цельсии
+}
+
+function hPaTommHg(hPa) {
+    return Math.round(hPa * 0.75006375541921);
 }
 
 getWeatherButton.addEventListener('click', getLocationCoords);

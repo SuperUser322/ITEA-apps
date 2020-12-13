@@ -23,6 +23,20 @@ function repeatStringNumTimes(str, num) {
 
 repeatStringNumTimes("abc", 3);
 
+//7 c while
+function repeatStringNumTimes(str, num) {
+    var newStr = '';
+    while (num > 0) {
+        newStr += str;
+        num -= 1;
+    }
+    if (num <= 0) {
+        return newStr;
+    }
+}
+
+repeatStringNumTimes("abc", 3);
+
 
 // with .repeat()
 function repeatStringNumTimes(str, num) {
@@ -74,3 +88,8 @@ booWho(null);
 const booWho = (bool) => typeof bool === "boolean" ? true : false;
 
 booWho(null);
+
+//10 совсем очень декларативное решение
+function booWho(bool) {
+    return typeof bool === "boolean";
+}
