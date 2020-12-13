@@ -1,4 +1,4 @@
-//6
+п»ї//6
 function confirmEnding(str, target) {
     return str.indexOf(target, str.length - target.length) !== -1;
 }
@@ -10,7 +10,7 @@ const confirmEnding = (str, target) => str.endsWith(target);
 
 confirmEnding("Bastian", "n");
 
-//7 c for некрасиво, зато не копипаста
+//7 c for РЅРµРєСЂР°СЃРёРІРѕ, Р·Р°С‚Рѕ РЅРµ РєРѕРїРёРїР°СЃС‚Р°
 function repeatStringNumTimes(str, num) {
     var newStr = '';
     for (; num > 0; num -= 1) {
@@ -46,7 +46,7 @@ function repeatStringNumTimes(str, num) {
 repeatStringNumTimes("abc", 3);
 
 
-//8 что-то многовато условий вышло...
+//8 С‡С‚Рѕ-С‚Рѕ РјРЅРѕРіРѕРІР°С‚Рѕ СѓСЃР»РѕРІРёР№ РІС‹С€Р»Рѕ...
 function truncateString(str, num) {
     let newStr = '';
     if (num > str.length) {
@@ -77,19 +77,19 @@ function findElement(arr, func) {
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 
-//10 декларативное решение
+//10 РґРµРєР»Р°СЂР°С‚РёРІРЅРѕРµ СЂРµС€РµРЅРёРµ
 function booWho(bool) {
     return typeof bool === "boolean" ? true : false;
 }
 
 booWho(null);
 
-//10 очень декларативное
+//10 РѕС‡РµРЅСЊ РґРµРєР»Р°СЂР°С‚РёРІРЅРѕРµ
 const booWho = (bool) => typeof bool === "boolean" ? true : false;
 
 booWho(null);
 
-//10 совсем очень декларативное решение
+//10 СЃРѕРІСЃРµРј РѕС‡РµРЅСЊ РґРµРєР»Р°СЂР°С‚РёРІРЅРѕРµ СЂРµС€РµРЅРёРµ
 function booWho(bool) {
     return typeof bool === "boolean";
 }

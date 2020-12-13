@@ -43,6 +43,8 @@ body {
     }
     .weather-card button {
         position: absolute;
+        width: 130px;
+        height: 22px;
         font-family: 'Lato', sans-serif;
         font-weight: 300;
         font-size: 14px;
@@ -50,18 +52,15 @@ body {
         background-color: white;
         border-radius: 10px;
         border-color: lightgray;
-        left: 100px;
+        left: 70px;
         right: 0px;
-        bottom: 120px;
-        animation: title-appear 1s ease-out 500ms forwards;
+        top: 40px;
     }
         .weather-card button:hover {
             background-color: lightgray;
             color: white;
         }
         .weather-card button:active {
-            background-color: darkgray;
-            border-color: lightgray;
         }
         .weather-card button:focus {
             outline: none;
@@ -169,4 +168,29 @@ body {
         transform: translateX(0px);
     }
 }
- 
+
+.loader {
+    display: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: 25px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden-part {
+    visibility: hidden;
+}
