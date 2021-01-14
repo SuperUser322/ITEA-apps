@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <title>Image File Uploader</title>
+    <link rel="stylesheet" href="stylesheets/my-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+</head>
+<body>
+
+    <main>
+        <section id="content">
+
+            <div class="wrapper">
+                <h1 class="title">Your Image Uploader</h1>
+                <p class="sub_title">You can upload any image you want</p>
+                <input type="file" id="uploader" style="display: none" multiple accept="image/*">
+                <label for="uploader" id="enterButton">Select a file ...</label>
+                <ul class="images"></ul>
+            </div>
+
+            <div class="modal-window">
+                <img src="" alt="" class="modal-image" />
+                <p class="modal-name"></p>
+                <i class="fas fa-times"></i>
+            </div>
+
+        </section>
+    </main>
+            <!--<script src="./leetcode/easy/String/string_matching.js"></script>-->
+            <script src="./displayImages.js"></script>
+            <script src="./playground.js"></script>
+</body>
+</html>
