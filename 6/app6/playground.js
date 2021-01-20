@@ -43,9 +43,9 @@ function displayMatches(event) {
     } else {
         let matchArray = findMatches(event.target.value, cities, secondaryValue);
         suggestions.innerHTML = matchArray.map(function (place) {
-            
-        let superstring = place.city + ' ' + place.state;
-        return `
+
+            let superstring = `Place: ${place.city}<br>State: ${place.state}<br>Population: ${place.population}<br>`;
+            return `
             <li>
                 <span>${stringProcessing(superstring, event.target.value, secondaryValue)}</span>
             </li>
